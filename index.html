@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Smart Health &amp; Fitness Assistant</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+</head><body>
+
+<nav class="navbar">
+  <div class="brand">&#127807; Smart Health &amp; Fitness Assistant</div>
+  <div class="user">Sakshi Gaikar (Roll No 15) | Demo</div>
+</nav>
+
+<nav class="tabs">
+  <a class="active" data-tab="dashboard">Dashboard</a>
+  <a data-tab="list">Wellness Log</a>
+  <a data-tab="apply">Apply Session</a>
+  <a data-tab="ai">AI Analysis</a>
+</nav>
+
+<main>
+  <section id="dashboard" class="tab-pane active">
+    <h1>Dashboard</h1>
+    <div class="sub">Overview of wellness sessions, scores and AI activity.</div>
+
+    <div class="cards">
+      <div class="card blue"><div class="num">28</div><div class="lbl">Sessions This Month</div></div>
+      <div class="card amber"><div class="num">06</div><div class="lbl">Goals Pending Review</div></div>
+      <div class="card green"><div class="num">22</div><div class="lbl">Completed This Month</div></div>
+      <div class="card cyan"><div class="num">14</div><div class="lbl">On Track Today</div></div>
+    </div>
+
+    <div class="section">
+      <h2>Recent Wellness Logs</h2>
+      <table>
+        <tr><th>User</th><th>Goal</th><th>Score</th><th>Status</th></tr>
+        <tr><td>Sakshi Gaikar</td><td>Weight Loss</td><td>85 / 100</td><td><span class="pill good">On Track</span></td></tr>
+        <tr><td>Rohit Mehta</td><td>Muscle Gain</td><td>72 / 100</td><td><span class="pill warn">Average</span></td></tr>
+        <tr><td>Priya Patel</td><td>General Fitness</td><td>90 / 100</td><td><span class="pill good">On Track</span></td></tr>
+        <tr><td>Aarav Sharma</td><td>Weight Loss</td><td>61 / 100</td><td><span class="pill warn">Average</span></td></tr>
+        <tr><td>Neha Iyer</td><td>Muscle Gain</td><td>59 / 100</td><td><span class="pill bad">Needs Improvement</span></td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="list" class="tab-pane">
+    <h1>Wellness Logs</h1>
+    <div class="sub">All sessions logged by users (CRUD: Add, Read, Update, Delete).</div>
+
+    <div class="section">
+      <div class="section-head">
+        <h2>Users List</h2>
+        <button class="btn primary">+ Add New User</button>
+      </div>
+
+      <table>
+        <tr><th>Name</th><th>Goal</th><th>Activity</th><th>Sleep</th><th>Water</th><th>Status</th><th>Actions</th></tr>
+
+        <tr>
+          <td>Aarav Sharma</td><td>Weight Loss</td><td>Low</td><td>6</td><td>5</td>
+          <td><span class="pill warn">Average</span></td>
+          <td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn del">Delete</button></td>
+        </tr>
+
+        <tr>
+          <td>Sakshi Gaikar</td><td>Weight Loss</td><td>Moderate</td><td>7.5</td><td>9</td>
+          <td><span class="pill good">On Track</span></td>
+          <td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn del">Delete</button></td>
+        </tr>
+
+        <tr>
+          <td>Priya Patel</td><td>General Fitness</td><td>High</td><td>8</td><td>9</td>
+          <td><span class="pill good">On Track</span></td>
+          <td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn del">Delete</button></td>
+        </tr>
+
+        <tr>
+          <td>Rohit Mehta</td><td>Muscle Gain</td><td>Moderate</td><td>6.5</td><td>7</td>
+          <td><span class="pill warn">Average</span></td>
+          <td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn del">Delete</button></td>
+        </tr>
+
+        <tr>
+          <td>Neha Iyer</td><td>Muscle Gain</td><td>Low</td><td>5</td><td>4</td>
+          <td><span class="pill bad">Needs Improvement</span></td>
+          <td><button class="btn view">View</button><button class="btn edit">Edit</button><button class="btn del">Delete</button></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section id="apply" class="tab-pane">
+    <h1>Log a New Wellness Session</h1>
+    <div class="sub">Submit your daily habits and see personalized AI suggestions.</div>
+
+    <form id="frm" class="section narrow">
+      <h2>Fitness Profile Entry</h2>
+
+      <div class="form-grid">
+        <div>
+          <label>Name</label>
+          <input name="name" value="Sakshi Gaikar">
+        </div>
+
+        <div>
+          <label>Age</label>
+          <input name="age" value="20">
+        </div>
+
+        <div>
+          <label>Wellness Goal</label>
+          <select name="goal">
+            <option>Weight Loss</option>
+            <option>Muscle Gain</option>
+            <option>General Fitness</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Activity Level</label>
+          <select name="activity">
+            <option>Low</option>
+            <option selected>Moderate</option>
+            <option>High</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Sleep (hours / day)</label>
+          <input name="sleep" value="7.5">
+        </div>
+
+        <div>
+          <label>Water (glasses / day)</label>
+          <input name="water" value="9">
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button type="submit" class="btn primary">Get Wellness Suggestions</button>
+        <button type="reset" class="btn warn">Reset</button>
+      </div>
+
+      <div id="errs"></div>
+    </form>
+  </section>
+
+  <section id="ai" class="tab-pane">
+    <h1>AI Analysis</h1>
+    <div class="sub">Locally running AI (Ollama / llama3.2) analyses your habits.</div>
+
+    <div id="result" class="section">
+      <p style="color:#64748b;text-align:center;margin:30px 0;">
+        Submit the form under
+        <b>Apply Session</b> tab to see AI analysis here.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer style="text-align:center;color:#94a3b8;font-size:12px;padding:16px;">
+  &copy; 2026 - Smart Health &amp; Fitness Assistant | Sakshi Gaikar (Roll No 15)
+</footer>
+
+<script src="js/app.js"></script>
+</body></html>
